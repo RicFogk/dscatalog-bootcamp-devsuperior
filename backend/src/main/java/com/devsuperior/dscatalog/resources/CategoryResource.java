@@ -43,7 +43,7 @@ public class CategoryResource {
 		
 	}
 	
-	@PostMapping (value = "/{id}")
+	@PostMapping //(value = "/{id}")
 	public ResponseEntity<CategoryDTO> insert(@RequestBody CategoryDTO dto){
 		dto = service.insert(dto);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getId()).toUri();
