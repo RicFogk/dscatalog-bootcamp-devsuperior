@@ -7,7 +7,7 @@ import './styles.scss';
 function Home(){
   return (
    <div className="home-cointainer">
-       <div className="row home-content">
+       <div className="row home-content card-base border-radius-20">
             <div className="col-6 home-text">
                 <h1 className="">
                     Conheça o melhor  <br /> catálogo de produtos
