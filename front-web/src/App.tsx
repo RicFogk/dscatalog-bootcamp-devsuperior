@@ -1,12 +1,14 @@
 import React from 'react';
 import './core/assets/styles/custom.scss';
 import './app.scss';
-import Navbar from './core/components/Navbar';
+import { Route } from 'react-router-dom';
+import Routes from './Routes';
+
 
 
 function App (){
     return (
-        <Navbar />
+       <Routes />
     );
 }
 export default App;
