@@ -9,6 +9,8 @@ type RequestParams = {
 
 const BASE_URL = 'http://localhost:3000';
 
+
+
 export function makeRequest({ method, url, data, params }:RequestParams){
     return axios(
         {method,
@@ -18,8 +20,7 @@ export function makeRequest({ method, url, data, params }:RequestParams){
         }
 
     );
-}
-
+}//arrow function abaixo:
 /*export const makeRequest = ({ method, url, data, params }:RequestParams) => {
     return axios ({
             method,
