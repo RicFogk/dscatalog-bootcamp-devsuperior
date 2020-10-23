@@ -1,18 +1,27 @@
 package com.devsuperior.dscatalog.dto;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+
 import com.devsuperior.dscatalog.entities.User;
 
-public class UserDTO {
+public class UserDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
+	
+	@NotBlank(message= "Campo obrigatório")
 	private String firstName;
+	
 	private String lastName;
+	
+	@Email(message= "Favor entrar um email válido")
 	private String email;
-	// Instrutordeciciu nao deixar a password transitando aqui .... >private String password;
+	// Instrutor deciciu nao deixar a password transitando aqui .... > tinha um //private String password;// aqui
 	
 	
 	Set<RoleDTO> roles = new HashSet<>();
